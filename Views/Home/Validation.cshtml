@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+@namespace TPLOCAL1.Models
+
+<head>
+    <meta charset="utf-8" />
+    <title>HN - TP LOCAL- Page de validation</title>
+    <link rel="feuille de style" href="~/resources/Index.css" />
+</head>
+<body>
+    <header>
+        <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
+        <h1>Page de validation</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/Home/Index">Accueil</a></li>
+            <li><a href="/Home/OpinionList">Liste avis</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <p>Votre formulaire a bien été pris en compte</p>
+
+        @{
+            FormInfos formInfos = new();
+            formInfos.Nom = Request.Form["nom"];
+            formInfos.Prenom = Request.Form["prenom"];
+            formInfos.Sexe = Request.Form["sexe"];
+            formInfos.Adresse = Request.Form["adresse"];
+            formInfos.CodePostal = Request.Form["codePostal"];
+            formInfos.Ville = Request.Form["ville"];
+            formInfos.AdresseMail = Request.Form["mail"];
+            formInfos.DateDebut = Request.Form["dateDebut"];
+            formInfos.FormationSuivie = Request.Form["formation"];
+            formInfos.AvisCobol = Request.Form["avisCobol"];
+            formInfos.AvisCSharp = Request.Form["avisCSharp"];
+        }
+
+        <p>            
+                <table class="table">
+                <thead>
+                    <th>Informations personnelles</th>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th>Nom</th>
+                        <td>@formInfos.Nom</td>
+                    </tr>
+
+                    <tr>
+                        <th>Prénom</th>
+                        <td>@formInfos.Prenom</td>
+                    </tr>
+
+                    <tr>
+                        <th>Sexe</th>
+                        <td>@formInfos.Sexe </td>
+                    </tr>
+
+                    <tr>
+                        <th>Adresse</th>
+                        <td>@formInfos.Adresse</td>
+                    </tr>
+
+                    <tr>
+                        <th>Code postal</th>
+                        <td>@formInfos.CodePostal</td>
+                    </tr>
+
+                    <tr>
+                        <th>Ville</th>
+                        <td>@formInfos.Ville</td>
+                    </tr>
+
+                    <tr>
+                        <th>Adresse mail</th>
+                        <td>@formInfos.AdresseMail</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table">
+                <thead>
+                    <th>Informations sur la formation suivie</th>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th>Date de début de la formation</th>
+                        <td>@formInfos.DateDebut</td>
+                    </tr>
+
+                    <tr>
+                        <th>Formation suivie</th>
+                        <td>@formInfos.FormationSuivie</td>
+                    </tr>                   
+                </tbody>
+            </table>
+
+            <table class="table">
+                <thead>
+                    <th>Avis sur la formation suivie</th>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th>Formation Cobol</th>
+                        <td>@formInfos.AvisCobol</td>
+                    </tr>
+
+                    <tr>
+                        <th>Formation C#</th>
+                        <td>@formInfos.AvisCSharp</td>
+                    </tr>                   
+                </tbody>
+            </table>
+
+        </p>
+    </section>
+</body>
+</html>

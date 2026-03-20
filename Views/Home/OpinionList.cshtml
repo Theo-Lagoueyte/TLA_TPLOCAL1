@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+@namespace TPLOCAL1.Models
+
+<head>
+    <meta charset="utf-8" />
+    <title>HN - TP LOCAL- Liste des avis</title>
+    <link rel="feuille de style" href="~/resources/Index.css" />
+</head>
+<body>
+    <header>
+        <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
+        <h1>Liste des avis</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/Home/Index">Accueil</a></li>
+            <li><a href="/Home/Form">Formulaire</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <p>         
+            @{OpinionList opinions = OpinionList.GetAvis("/XlmFile/DataAvis.xml");}
+                <table class="table">
+                <thead>
+                    <th>Liste</th>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Nom</td>
+                        <td>Prénom</td>
+                        <td>Avis donné</td>
+                    </tr>
+
+                    @foreach (Opinion opinion in opinions)
+                    {
+                        <tr>
+                            <td>@opinion.LastName</td>
+                            <td>@opinion.FirstName</td>
+                            @if (opinion.OpinionGiven == 'O')
+                            {
+                                <td bgcolor="green">Oui</td>
+                            }
+                            else
+                            {
+                                <td bgcolor="red">Non</td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+                
+        </p>

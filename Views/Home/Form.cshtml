@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+@namespace TPLOCAL1.Models
+
+<head>
+    <meta charset="utf-8" />
+    <title>HN - TP LOCAL- Form</title>
+    <link rel="feuille de style" href="~/resources/Index.css" />
+</head>
+<body>
+    <header>
+        <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
+        <h1>Formulaire TP HN avis</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/Home/Index">Accueil</a></li>
+            <li><a href="/Home/OpinionList">Liste avis</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <p>
+            <form action="/Home/Validation" method="post">
+                <table class="table">
+                <thead>
+                    <th>Informations personnelles</th>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th>Nom</th>
+                        <td><input type="text" name="nom"/></td>
+                    </tr>
+
+                    <tr>
+                        <th>Prénom</th>
+                        <td><input type="text" name="prenom"/></td>
+                    </tr>
+
+                    <tr>
+                        <th>Sexe</th>
+                        <td>
+                            <select name="sexe">
+                                <option>Sélectionnez votre sexe</option>
+                                <option>Homme</option>
+                                <option>Femme</option>
+                                <option>Autre</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Adresse</th>
+                        <td><input type="text" name="adresse"/></td>
+                    </tr>
+
+                    <tr>
+                        <th>Code postal</th>
+                        <td><input type="number" min="01000" max="99999" name="codePostal"/></td>
+                    </tr>
+
+                    <tr>
+                        <th>Ville</th>
+                        <td><input type="text" name=ville/></td>
+                    </tr>
+
+                    <tr>
+                        <th>Adresse mail</th>
+                        <td><input type="email" name="mail"/></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table">
+                <thead>
+                    <th>Informations sur la formation suivie</th>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th>Date de début de la formation</th>
+                        <td><input type="date" max="2021/01/01" name="dateDebut"/></td>
+                    </tr>
+
+                    <tr>
+                        <th>Formation suivie</th>
+                        <td>
+                            <select name="formation">
+                                <option>Sélectionnez votre formation</option>
+                                <option>Formation Cobol</option>
+                                <option>Formation C#</option>
+                                <option>Les deux</option>
+                            </select>
+                        </td>
+                    </tr>                   
+                </tbody>
+            </table>
+
+            <table class="table">
+                <thead>
+                    <th>Avis sur la formation suivie</th>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th>Formation Cobol</th>
+                        <td><input type="text" name="avisCobol"/></td>
+                    </tr>
+
+                    <tr>
+                        <th>Formation C#</th>
+                        <td><input type="text" name="avisCSharp"/></td>
+                    </tr>                   
+                </tbody>
+            </table>
+
+            <button type="submit">Valider</button>
+          
+            </form>
+
+        </p>
+    </section>
+</body>
+</html>
