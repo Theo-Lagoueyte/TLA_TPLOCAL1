@@ -33,18 +33,18 @@
                 <tbody>
                     <tr>
                         <th>Nom</th>
-                        <td><input type="text" name="nom"/></td>
+                        <td><input type="text" name="nom" required/></td>
                     </tr>
 
                     <tr>
                         <th>Prénom</th>
-                        <td><input type="text" name="prenom"/></td>
+                        <td><input type="text" name="prenom" required/></td>
                     </tr>
 
                     <tr>
                         <th>Sexe</th>
                         <td>
-                            <select name="sexe">
+                            <select name="sexe" required>
                                 <option>Sélectionnez votre sexe</option>
                                 <option>Homme</option>
                                 <option>Femme</option>
@@ -55,22 +55,22 @@
 
                     <tr>
                         <th>Adresse</th>
-                        <td><input type="text" name="adresse"/></td>
+                        <td><input type="text" name="adresse" required/></td>
                     </tr>
 
                     <tr>
                         <th>Code postal</th>
-                        <td><input type="number" min="01000" max="99999" name="codePostal"/></td>
+                        <td><input type="number" min="01000" max="99999" name="codePostal" required/></td>
                     </tr>
 
                     <tr>
                         <th>Ville</th>
-                        <td><input type="text" name=ville/></td>
+                        <td><input type="text" name=ville required/></td>
                     </tr>
 
                     <tr>
                         <th>Adresse mail</th>
-                        <td><input type="email" name="mail"/></td>
+                        <td><input type="email" name="mail" required/></td>
                     </tr>
                 </tbody>
             </table>
@@ -83,13 +83,13 @@
                 <tbody>
                     <tr>
                         <th>Date de début de la formation</th>
-                        <td><input type="date" max="2021/01/01" name="dateDebut"/></td>
+                        <td><input type="date" max="2021/01/01" name="dateDebut" required/></td>
                     </tr>
 
                     <tr>
                         <th>Formation suivie</th>
                         <td>
-                            <select name="formation">
+                            <select name="formation" required>
                                 <option>Sélectionnez votre formation</option>
                                 <option>Formation Cobol</option>
                                 <option>Formation C#</option>
