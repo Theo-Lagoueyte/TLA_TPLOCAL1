@@ -1,0 +1,8 @@
+C:\Users\theol\Music\Documents\Formation HN\.NET\TPLOCAL1-base-main\TLA_TPLOCAL1\obj\Debug\net7.0\TPLOCAL1.csproj.AssemblyReference.cache
+C:\Users\theol\Music\Documents\Formation HN\.NET\TPLOCAL1-base-main\TLA_TPLOCAL1\obj\Debug\net7.0\TPLOCAL1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\theol\Music\Documents\Formation HN\.NET\TPLOCAL1-base-main\TLA_TPLOCAL1\obj\Debug\net7.0\TPLOCAL1.AssemblyInfoInputs.cache
+C:\Users\theol\Music\Documents\Formation HN\.NET\TPLOCAL1-base-main\TLA_TPLOCAL1\obj\Debug\net7.0\TPLOCAL1.AssemblyInfo.cs
+C:\Users\theol\Music\Documents\Formation HN\.NET\TPLOCAL1-base-main\TLA_TPLOCAL1\obj\Debug\net7.0\TPLOCAL1.csproj.CoreCompileInputs.cache
+C:\Users\theol\Music\Documents\Formation HN\.NET\TPLOCAL1-base-main\TLA_TPLOCAL1\obj\Debug\net7.0\TPLOCAL1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\theol\Music\Documents\Formation HN\.NET\TPLOCAL1-base-main\TLA_TPLOCAL1\obj\Debug\net7.0\TPLOCAL1.RazorAssemblyInfo.cache
+C:\Users\theol\Music\Documents\Formation HN\.NET\TPLOCAL1-base-main\TLA_TPLOCAL1\obj\Debug\net7.0\TPLOCAL1.RazorAssemblyInfo.cs
