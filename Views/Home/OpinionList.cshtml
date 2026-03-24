@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@model TPLOCAL1.Models.OpinionList
+
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
-@namespace TPLOCAL1.Models
 
 <head>
     <meta charset="utf-8" />
@@ -36,12 +36,12 @@
                         <td>Avis donné</td>
                     </tr>
 
-                    @foreach (Opinion opinion in opinions)
+                    @foreach (var opinion in Model)
                     {
                         <tr>
                             <td>@opinion.LastName</td>
                             <td>@opinion.FirstName</td>
-                            @if (opinion.OpinionGiven == 'O')
+                            @if (opinion.OpinionGiven == "O")
                             {
                                 <td bgcolor="green">Oui</td>
                             }

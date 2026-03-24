@@ -23,13 +23,15 @@ namespace TPLOCAL1.Controllers
                 switch (id)
                 {
                     case "OpinionList":
-                        //TODO : code reading of the xml files provide
-                        OpinionList opinions = OpinionList.GetAvis("/XlmFile/DataAvis.xml");
-                        return View(id);
+                        // Récupération de la liste des avis à partir du fichier XML
+                        OpinionList opinions = new OpinionList();
+                        opinions.GetAvis("/XlmFile/DataAvis.xml");
+                        // Si la vue attend un modèle, il faut le passer en paramètre à View()
+                        return View(id, opinions);
                     case "Form":
                         //TODO : call the Form view with data model empty
                         FormInfos formInfos = new();
-                        return View(id);
+                        return View(id, formInfos);
                     default:
                         //retourn to the Index view (see routing in Program.cs)
                         return View();
@@ -74,7 +76,7 @@ namespace TPLOCAL1.Controllers
             //si tout est bon on passe à la page de validation
             else
             {
-                return View("Validation", FormInfos);
+                return View("Validation", model: formInfos);
             }
         }
     }

@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@model TPLOCAL1.Models.FormInfos
+
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
-@namespace TPLOCAL1.Models
 
 <head>
     <meta charset="utf-8" />
@@ -34,37 +34,37 @@
                 <tbody>
                     <tr>
                         <th>Nom</th>
-                        <td>@formInfos.Nom</td>
+                        <td>@Model.Nom</td>
                     </tr>
 
                     <tr>
                         <th>Prénom</th>
-                        <td>@formInfos.Prenom</td>
+                        <td>@Model.Prenom</td>
                     </tr>
 
                     <tr>
                         <th>Sexe</th>
-                        <td>@formInfos.Sexe </td>
+                        <td>@Model.Sexe </td>
                     </tr>
 
                     <tr>
                         <th>Adresse</th>
-                        <td>@formInfos.Adresse</td>
+                        <td>@Model.Adresse</td>
                     </tr>
 
                     <tr>
                         <th>Code postal</th>
-                        <td>@formInfos.CodePostal</td>
+                        <td>@Model.CodePostal</td>
                     </tr>
 
                     <tr>
                         <th>Ville</th>
-                        <td>@formInfos.Ville</td>
+                        <td>@Model.Ville</td>
                     </tr>
 
                     <tr>
                         <th>Adresse mail</th>
-                        <td>@formInfos.AdresseMail</td>
+                        <td>@Model.AdresseMail</td>
                     </tr>
                 </tbody>
             </table>
@@ -77,12 +77,12 @@
                 <tbody>
                     <tr>
                         <th>Date de début de la formation</th>
-                        <td>@formInfos.DateDebut</td>
+                        <td>@Model.DateDebut</td>
                     </tr>
 
                     <tr>
                         <th>Formation suivie</th>
-                        <td>@formInfos.FormationSuivie</td>
+                        <td>@Model.FormationSuivie</td>
                     </tr>                   
                 </tbody>
             </table>
@@ -95,12 +95,12 @@
                 <tbody>
                     <tr>
                         <th>Formation Cobol</th>
-                        <td>@formInfos.AvisCobol</td>
+                        <td>@Model.AvisCobol</td>
                     </tr>
 
                     <tr>
                         <th>Formation C#</th>
-                        <td>@formInfos.AvisCSharp</td>
+                        <td>@Model.AvisCSharp</td>
                     </tr>                   
                 </tbody>
             </table>

@@ -9,17 +9,14 @@ using System.Xml;
 //This file is not to be modified
 namespace TPLOCAL1.Models
 {
-    public class OpinionList
+    public class OpinionList : List<Opinion>
     {
         /// <summary>
         /// Function that alow to recover the opinions list inside an xml file
         /// </summary>
         /// <param name="file">file path</param>
-        public List<Opinion> GetAvis(string file)
+        public void GetAvis(string file)
         {
-            // instantiating empty list
-            List<Opinion> opinionList = new List<Opinion>();
-
             // Creation of an XMLDocument object that alow to recover datas from the file
             XmlDocument xmlDoc = new XmlDocument();
             // Reading of the file thank to a StreamReader file
@@ -47,11 +44,8 @@ namespace TPLOCAL1.Models
                 };
 
                 // Adding the object to the list.
-                opinionList.Add(opinion);
+                this.Add(opinion);
             }
-
-            // Returning the list formed by processing to the calling method.
-            return opinionList;
         }
     }
 
