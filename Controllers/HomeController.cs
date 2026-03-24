@@ -25,7 +25,7 @@ namespace TPLOCAL1.Controllers
                     case "OpinionList":
                         // Récupération de la liste des avis à partir du fichier XML
                         OpinionList opinions = new OpinionList();
-                        opinions.GetAvis("/XlmFile/DataAvis.xml");
+                        opinions.GetAvis("XlmFile/DataAvis.xml");
                         // Si la vue attend un modèle, il faut le passer en paramètre à View()
                         return View(id, opinions);
                     case "Form":
